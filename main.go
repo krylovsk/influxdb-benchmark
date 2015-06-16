@@ -207,7 +207,7 @@ func printResults(results []*RunResults, totals *TotalResults, format string) {
 }
 
 func cleanData(url *url.URL, user, pass, db string) {
-	fmt.Println("Cleaning benchmarking data on server ", url)
+	log.Println("Cleaning benchmarking data on server ", url)
 	clientConfig := influx.Config{
 		URL:      *url,
 		Username: user,
