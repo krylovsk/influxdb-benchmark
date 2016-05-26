@@ -1,6 +1,6 @@
 InfluxDB benchmarking tool
 =========
-A simple InfluxDB (0.9) benchmarking tool.
+A simple InfluxDB (0.13) benchmarking tool.
 
 Supports multiple concurrent clients and configurable batch size:
 ```

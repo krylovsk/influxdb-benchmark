@@ -12,12 +12,12 @@ import (
 	"time"
 
 	"github.com/GaryBoone/GoStats/stats"
-	influx "github.com/influxdb/influxdb/client"
+	influx "github.com/influxdata/influxdb/client/v2"
 )
 
 // Message describes a data point
 type Message struct {
-	Batch     *influx.BatchPoints
+	Batch     influx.BatchPoints
 	Sent      time.Time
 	Delivered time.Time
 	Error     bool
@@ -208,12 +208,12 @@ func printResults(results []*RunResults, totals *TotalResults, format string) {
 
 func cleanData(url *url.URL, user, pass, db string) {
 	log.Println("Cleaning benchmarking data on server ", url)
-	clientConfig := influx.Config{
-		URL:      *url,
+	clientConfig := influx.HTTPConfig{
+		Addr:     url.String(),
 		Username: user,
 		Password: pass,
 	}
-	c, err := influx.NewClient(clientConfig)
+	c, err := influx.NewHTTPClient(clientConfig)
 	if err != nil {
 		log.Fatalf("Error connecting to server %v: %v", url.String(), err)
 	}
