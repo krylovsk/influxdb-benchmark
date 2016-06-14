@@ -8,7 +8,7 @@ Installation:
 go get github.com/krylovsk/influxdb-benchmark
 ```
 
-All dependcies are vendored with [manul](https://github.com/kovetskiy/manul).
+All dependencies are vendored with [manul](https://github.com/kovetskiy/manul).
 
 The tool supports multiple concurrent clients and configurable batch size:
 ```
