@@ -1,6 +1,12 @@
 InfluxDB benchmarking tool
 =========
-A simple InfluxDB (0.13) benchmarking tool.
+A simple InfluxDB (1.0.0 beta1) benchmarking tool.
+
+```
+go get github.com/GaryBoone/GoStats/stats
+go get github.com/influxdata/influxdb/client/v2
+go install influxdb-benchmark
+```
 
 Supports multiple concurrent clients and configurable batch size:
 ```
