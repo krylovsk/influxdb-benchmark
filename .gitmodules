@@ -1,0 +1,6 @@
+[submodule "vendor/github.com/GaryBoone/GoStats"]
+	path = vendor/github.com/GaryBoone/GoStats
+	url = git://github.com/GaryBoone/GoStats
+[submodule "vendor/github.com/influxdata/influxdb"]
+	path = vendor/github.com/influxdata/influxdb
+	url = git://github.com/influxdata/influxdb

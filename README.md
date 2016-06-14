@@ -2,7 +2,15 @@ InfluxDB benchmarking tool
 =========
 A simple InfluxDB (>=0.13) benchmarking tool.
 
-Supports multiple concurrent clients and configurable batch size:
+Installation:
+
+```
+go get github.com/krylovsk/influxdb-benchmark
+```
+
+All dependcies are vendored with [manul](https://github.com/kovetskiy/manul).
+
+The tool supports multiple concurrent clients and configurable batch size:
 ```
 > influxdb-benchmark --help
 Usage of influxdb-benchmark:
