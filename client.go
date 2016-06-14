@@ -86,7 +86,7 @@ func (c *Client) Run(res chan *RunResults) {
 func (c *Client) genMessages(ch chan *Message, done chan bool) {
 	bpsConf := influx.BatchPointsConfig{
 		Database:        c.Database,
-		RetentionPolicy: "default",
+		RetentionPolicy: "autogen",
 	}
 	bps, err := influx.NewBatchPoints(bpsConf)
 	if err != nil {
